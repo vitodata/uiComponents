@@ -1,0 +1,9 @@
+<h1> Bootstrap Typeahead for Angular</h1>
+<p>
+  <a href="https://valor-software.com/ngx-bootstrap/#/typeahead" target="_blank">Demo</a>
+  <br /> Typeahead wird für die Patienten-Suche (oben rechts) und für Formulare verwendet (Dropdown inkl. neuer Eintrag)
+  <b>Achtung:</b> In dieser Demo wird aktuell Bootstrap CSS verwendet. https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+  <br
+  /> Dies muss nicht zwingend so sein. Die Styles für Typeahead können auch selber geschrieben werden.
+</p>
+<input [(ngModel)]="comment" type="text" [typeahead]="list" [typeaheadOptionsLimit]="10" [typeaheadMinLength]="0" autocomplete="off">

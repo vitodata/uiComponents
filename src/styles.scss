@@ -1,0 +1,18 @@
+body {
+  margin: 30px;
+}
+nav {
+  a {
+    color: #000000;
+    margin-right: 15px;
+    text-transform: none;
+  }
+
+  a.active,
+  a:hover {
+    color: #cc2e21;
+  }
+}
+main {
+  margin: 20px 0;
+}
