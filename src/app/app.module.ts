@@ -4,9 +4,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { JqxGridComponent } from './jqx-grid/jqx-grid.component';
+import { JqxTreeGridComponent } from './jqx-grid/jqx-treegrid.component';
+import { JqxGridDragDropComponent } from './jqx-grid/jqx-grid-drag-drop.component';
 import { TypeaheadComponent } from './typeahead/typeahead.component';
 
 import { jqxGridComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxgrid';
+import { jqxDropDownButtonComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownbutton';
+import { jqxDragDropComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdragdrop';
+import { jqxDropDownListComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownlist';
+import { jqxTreeComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtree';
+import { jqxTreeGridComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtreegrid';
+import { jqxSortableComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxsortable';
 import { jqxDateTimeInputComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdatetimeinput';
 import { JqxDatetimeComponent } from './jqx-datetime/jqx-datetime.component';
 import { WysiwygComponent } from './wysiwyg/wysiwyg.component';
@@ -23,6 +31,8 @@ quill.register(Block, true);
 
 const routes = [
   { path: 'grid', component: JqxGridComponent },
+  { path: 'griddragdrop', component: JqxGridDragDropComponent },
+  { path: 'treegrid', component: JqxTreeGridComponent },
   { path: 'typeahead', component: TypeaheadComponent },
   { path: 'datetime', component: JqxDatetimeComponent },
   { path: 'wysiwyg', component: WysiwygComponent },
@@ -40,10 +50,18 @@ const routes = [
   declarations: [
     // jQWidgets Components
     jqxGridComponent,
+    jqxDropDownButtonComponent,
     jqxDateTimeInputComponent,
+    jqxDragDropComponent,
+    jqxDropDownListComponent,
+    jqxSortableComponent,
+    jqxTreeComponent,
+    jqxTreeGridComponent,
     // components from app
     AppComponent,
     JqxGridComponent,
+    JqxTreeGridComponent,
+    JqxGridDragDropComponent,
     TypeaheadComponent,
     JqxDatetimeComponent,
     WysiwygComponent
