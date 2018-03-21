@@ -1,0 +1,16 @@
+<h1> agGrid for Angular</h1>
+<p>
+    <a href="https://www.ag-grid.com/best-angular-2-data-grid/" target="_blank">Demo</a>
+    <br /> Innerhalb des Grids werden weitere Elemente verwendet (z.B. Spalte Datum Datepicker / Pulse Quality Selector). Tags.
+    <br /> Row Drag & Drop über die Spalte Datum möglich.
+    <br />
+    <!-- <b>Info: Pulse wird validiert. Der Pulse darf nicht grösser sein als 200. Dies zeigt ein Beispiel wie die Validierung out-of-the-box
+        aussieht.
+    </b> -->
+</p>
+
+<ag-grid-angular style="width: 100%; height: 400px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs"
+    [rowDragManaged]="true" [gridOptions]="gridOptions" (gridReady)="onGridReady($event)" [stopEditingWhenGridLosesFocus]="true"
+    [enableFilter]="true" [enableColResize]="true" (cellEditingStarted)="gridCellEditingStarted($event)" (cellEditingStopped)="gridCellEditingStopped($event)"
+    (modelUpdated)="gridModelUpdated($event)" (cellFocused)="gridCellFocused($event)" enableColResize enableSorting enableFilter>
+</ag-grid-angular>

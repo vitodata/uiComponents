@@ -275,6 +275,18 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
 
+ag-grid-angular@^17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/ag-grid-angular/-/ag-grid-angular-17.0.0.tgz#59e3ff0f1e62cb8c61ddc0397326cd0202148904"
+
+ag-grid-enterprise@^17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/ag-grid-enterprise/-/ag-grid-enterprise-17.0.0.tgz#760769c9400f6eb60213a06ca2c5fe91c92d9fd4"
+
+ag-grid@^17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/ag-grid/-/ag-grid-17.0.0.tgz#b8c82268c1785e04425a3149ca53cc526376029b"
+
 agent-base@2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-2.1.1.tgz#d6de10d5af6132d5bd692427d46fc538539094c7"
@@ -4206,6 +4218,10 @@ module-deps@^4.0.8:
     subarg "^1.0.0"
     through2 "^2.0.0"
     xtend "^4.0.0"
+
+moment@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.21.0.tgz#2a114b51d2a6ec9e6d83cf803f838a878d8a023a"
 
 move-concurrently@^1.0.1:
   version "1.0.1"

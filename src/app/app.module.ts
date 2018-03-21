@@ -20,9 +20,19 @@ import { JqxDatetimeComponent } from './jqx-datetime/jqx-datetime.component';
 import { WysiwygComponent } from './wysiwyg/wysiwyg.component';
 import { FormsModule } from '@angular/forms';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-
 import { QuillModule } from 'ngx-quill';
 import * as Quill from 'quill';
+import { AgGridModule } from 'ag-grid-angular/main';
+import 'ag-grid-enterprise';
+import { GridDatePickerComponent } from './grid-components/grid-date-picker.component';
+import {
+  BsDropdownModule,
+  ButtonsModule,
+  DatepickerModule,
+  BsDatepickerModule
+} from 'ngx-bootstrap';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
+
 const quill: any = Quill; // this one is important, otherwise 'Quill' is undefined
 const Parchment = quill.import('parchment'); // override p with div tag
 const Block = Parchment.query('block');
@@ -30,7 +40,7 @@ Block.tagName = 'DIV';
 quill.register(Block, true);
 
 const routes = [
-  { path: 'grid', component: JqxGridComponent },
+  { path: 'grid', component: AgGridComponent },
   { path: 'griddragdrop', component: JqxGridDragDropComponent },
   { path: 'treegrid', component: JqxTreeGridComponent },
   { path: 'typeahead', component: TypeaheadComponent },
@@ -43,9 +53,11 @@ const routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot(routes),
     TypeaheadModule.forRoot(),
-    QuillModule
+    QuillModule,
+    AgGridModule.withComponents([GridDatePickerComponent])
   ],
   declarations: [
     // jQWidgets Components
@@ -59,6 +71,8 @@ const routes = [
     jqxTreeGridComponent,
     // components from app
     AppComponent,
+    AgGridComponent,
+    GridDatePickerComponent,
     JqxGridComponent,
     JqxTreeGridComponent,
     JqxGridDragDropComponent,
