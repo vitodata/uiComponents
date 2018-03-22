@@ -16,3 +16,54 @@ nav {
 main {
   margin: 20px 0;
 }
+
+$font-family: 'Open Sans', sans-serif;
+
+.ag-theme-balham {
+  .ag-header {
+    background-color: #757575 !important;
+  }
+
+  .ag-header-cell {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.2 !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    padding: 8px !important;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .ag-header-cell-menu-button {
+    .ag-icon-menu {
+      height: 16px !important;
+    }
+  }
+
+  .ag-header-cell-resize {
+    top: 0;
+
+    &::after {
+      height: 100% !important;
+      margin-top: 0 !important;
+      border-right: 1px solid #dadada !important;
+    }
+  }
+
+  .ag-row {
+    font-size: 14px;
+
+    &:nth-child(2n) {
+      background-color: #f6f6f6;
+    }
+  }
+
+  .ag-cell {
+    line-height: 1.2 !important;
+    padding: 8px !important;
+    border-right: 1px solid #dadada !important;
+  }
+}

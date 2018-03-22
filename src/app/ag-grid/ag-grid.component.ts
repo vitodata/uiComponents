@@ -206,6 +206,8 @@ export class AgGridComponent implements OnInit {
         // make every column use 'text' filter by default
         filter: 'agTextColumnFilter'
       },
+      headerHeight: 28,
+      rowHeight: 34,
       columnTypes: {
         nonEditableColumn: { editable: false },
         dateColumn: {
