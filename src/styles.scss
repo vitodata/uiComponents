@@ -30,7 +30,7 @@ $font-family: 'Open Sans', sans-serif;
     line-height: 1.2 !important;
     color: #fff !important;
     text-transform: uppercase !important;
-    padding: 8px !important;
+    padding: 6px 8px !important;
 
     &::after {
       display: none;
@@ -63,7 +63,29 @@ $font-family: 'Open Sans', sans-serif;
 
   .ag-cell {
     line-height: 1.2 !important;
-    padding: 8px !important;
+    padding: 6px 8px !important;
     border-right: 1px solid #dadada !important;
+
+    &-inline-editing {
+      height: 33px !important;
+
+      select {
+        outline: none;
+        border: none !important;
+        height: 33px !important;
+      }
+
+      input {
+        border: none;
+        outline: none;
+      }
+    }
+
+    &-edit-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 6px 8px;
+    }
   }
 }
