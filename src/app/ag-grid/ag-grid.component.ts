@@ -147,6 +147,36 @@ export class AgGridComponent implements OnInit {
         comment: 'sdf',
         effectiveDateTime: '2017-01-01T16:08:12Z',
         rowVersion: 'AAAAAAABw3w='
+      },
+      {
+        id: 1430,
+        patientId: 1,
+        careProviderId: 'HM',
+        rowNo: 0,
+        systolic: 4,
+        diastolic: 1,
+        pulse: 100,
+        pulseQuality: 'Undefined',
+        bodySite: 'RightArm',
+        bloodPressureMeasurementPosition: 'Horizontal',
+        comment: 'sdf',
+        effectiveDateTime: '2017-01-01T16:08:12Z',
+        rowVersion: 'AAAAAAABw3w='
+      },
+      {
+        id: 113,
+        patientId: 1,
+        careProviderId: 'MM',
+        rowNo: 0,
+        systolic: 30,
+        diastolic: 7,
+        pulse: 90,
+        pulseQuality: 'Undefined',
+        bodySite: 'RightArm',
+        bloodPressureMeasurementPosition: 'Horizontal',
+        comment: 'sdf',
+        effectiveDateTime: '2017-01-01T16:08:12Z',
+        rowVersion: 'AAAAAAABw3w='
       }
     ];
     this.bindGridData(this.bpps);
