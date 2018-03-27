@@ -17,12 +17,12 @@
   [typeaheadOptionField]="'id'" [placeholder]="'z.B. Meister, 123456'">
 
 <ng-template #searchItemTemplate let-model="item" let-index="index">
-  <div style="width: 12.5%;" class="divTableCell">{{ model.id }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.name.family }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.name.given }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.gender }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.age.years }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.age.years }}</div>
-  <div style="width: 12.5%;" class="divTableCell">{{ model.birthDate | date: 'dd.MM.yyyy' }}</div>
-  <div style="width: 12.5%;" class="divTableCell"><button (click)="openInNewTab(model)">NEUES FENSTER</button></div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.id }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.name.family }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.name.given }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.gender }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.age.years }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.age.years }}</div>
+  <div style="width: 12.5%;" class="dropdown-child">{{ model.birthDate | date: 'dd.MM.yyyy' }}</div>
+  <div style="width: 12.5%;" class="dropdown-child"><button (click)="openInNewTab(model)">NEUES FENSTER</button></div>
 </ng-template>
