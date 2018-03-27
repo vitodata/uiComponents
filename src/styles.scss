@@ -89,3 +89,37 @@ $font-family: 'Open Sans', sans-serif;
     }
   }
 }
+
+
+.dropdown-menu {
+  display: table !important;
+  font-size: 14px;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-item {
+  display: table-row !important;
+  line-height: 1.2 !important;
+  color: #000000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:nth-child(2n) {
+    background-color: #f6f6f6;
+  }
+
+  &.active {
+    background-color: #f6f6f6;
+  }
+}
+
+.divTableCell {
+  display: table-cell;
+  padding: 6px 8px !important;
+}

@@ -16,10 +16,13 @@
 <input #searchInput [(ngModel)]="keyword" [typeahead]="person" [typeaheadItemTemplate]="searchItemTemplate" [typeaheadOptionsLimit]="20"
   [typeaheadOptionField]="'id'" [placeholder]="'z.B. Meister, 123456'">
 
-
-
 <ng-template #searchItemTemplate let-model="item" let-index="index">
-  {{ model.id }} {{ model.name.family }} {{ model.name.given }} {{ model.gender }} {{ model.age.years }} {{ model.birthDate
-  | date: 'dd.MM.yyyy' }}
-  <button (click)="openInNewTab(model)">NEUES FENSTER</button>
+  <div class="divTableCell">{{ model.id }}</div>
+  <div class="divTableCell">{{ model.name.family }}</div>
+  <div class="divTableCell">{{ model.name.given }}</div>
+  <div class="divTableCell">{{ model.gender }}</div>
+  <div class="divTableCell">{{ model.age.years }}</div>
+  <div class="divTableCell">{{ model.age.years }}</div>
+  <div class="divTableCell">{{ model.birthDate | date: 'dd.MM.yyyy' }}</div>
+  <div class="divTableCell"><button (click)="openInNewTab(model)">NEUES FENSTER</button></div>
 </ng-template>
