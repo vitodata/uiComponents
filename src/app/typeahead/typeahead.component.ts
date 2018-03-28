@@ -36,7 +36,7 @@ export class TypeaheadComponent implements OnInit {
       id: 1346,
       name: {
         family: 'Meyer',
-        given: 'Hans-Rudolf',
+        given: 'Hans',
         title: null,
         salutation: 'Herr'
       },
