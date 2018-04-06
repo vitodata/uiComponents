@@ -15,8 +15,6 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 import { QuillModule } from 'ngx-quill';
 import * as Quill from 'quill';
-import { GridsterComponent } from './gridster/gridster.component';
-import { GridsterModule } from 'angular-gridster2';
 const quill: any = Quill; // this one is important, otherwise 'Quill' is undefined
 const Parchment = quill.import('parchment'); // override p with div tag
 const Block = Parchment.query('block');
@@ -24,11 +22,10 @@ Block.tagName = 'DIV';
 quill.register(Block, true);
 
 const routes = [
-  // { path: 'grid', component: JqxGridComponent },
+  { path: 'grid', component: JqxGridComponent },
   { path: 'typeahead', component: TypeaheadComponent },
-  // { path: 'datetime', component: JqxDatetimeComponent },
+  { path: 'datetime', component: JqxDatetimeComponent },
   { path: 'wysiwyg', component: WysiwygComponent },
-  { path: 'gridster', component: GridsterComponent },
   { path: '', redirectTo: '/grid', pathMatch: 'full' }
 ];
 
@@ -38,8 +35,7 @@ const routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     TypeaheadModule.forRoot(),
-    QuillModule,
-    GridsterModule
+    QuillModule
   ],
   declarations: [
     // jQWidgets Components
@@ -50,8 +46,7 @@ const routes = [
     JqxGridComponent,
     TypeaheadComponent,
     JqxDatetimeComponent,
-    WysiwygComponent,
-    GridsterComponent
+    WysiwygComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
