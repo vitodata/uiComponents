@@ -1,0 +1,21 @@
+<h1> jqxTreeGrid for Angular</h1>
+<p>
+    <a href="https://www.jqwidgets.com/angular/angular-treegrid/index.htm" target="_blank">Demo</a>
+    <br /> Innerhalb des Grids werden die Selectbox von jqWidgets verwendet (z.B. Spalte Wer). Innerhalb des Outline Forms die
+    normalen select Tags.
+    <br />
+    <b>Info: Pulse wird validiert. Der Pulse darf nicht grösser sein als 200. Dies zeigt ein Beispiel wie die Validierung out-of-the-box
+        aussieht.
+    </b>
+</p>
+
+<!-- <jqxTreeGrid #widgetGrid (onRowSelect)="rowSelect($event)" (onRowUnselect)="rowUnselect($event)" (onRowEndEdit)="rowEndEdit($event)"
+    (onRowBeginEdit)="rowBeginEdit($event)" [width]="850" [source]="dataAdapter" [pageable]="true" [editable]="true" [showToolbar]="true"
+    [altRows]="true" [pagerButtonsCount]="8" [toolbarHeight]="35" [renderToolbar]="renderToolbar" [columns]="columns">
+</jqxTreeGrid> -->
+
+<div class="drop-target">
+    <jqxTreeGrid #widgetGrid [rendered]="rendered" [width]="850" [height]="400" [source]="dataAdapter" [pageable]="true" [sortable]="true"
+        [columns]="columns" [ready]="ready" #TreeGrid>
+    </jqxTreeGrid>
+</div>
