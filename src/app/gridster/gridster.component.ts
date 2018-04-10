@@ -15,7 +15,7 @@ export class GridsterComponent implements OnInit {
     fixedColWidth: 105,
     fixedRowHeight: 105,
     outerMargin: true,
-    margin: 10,
+    margin: 1,
     mobileBreakpoint: 600,
     pushResizeItems: true,
     defaultItemCols: 1, // default width of an item in columns

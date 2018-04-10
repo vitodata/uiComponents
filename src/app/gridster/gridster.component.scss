@@ -1,4 +1,19 @@
-.workspace {
-  background-color: gray;
-  height: calc(100vh - 135px);
+.gridster {
+  background: transparent;
+  overflow: initial !important;
+}
+
+.gridster__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.gridster__title {
+  text-transform: uppercase;
+  color: #757575;
+}
+
+.gridster__item {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
 }
