@@ -198,6 +198,7 @@ export class AgGridComponent implements OnInit {
     // agGrid
 
     this.gridOptions = <GridOptions>{
+      rowSelection: 'single',
       defaultColDef: {
         // set every column width
         width: 100,
