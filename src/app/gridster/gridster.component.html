@@ -9,9 +9,16 @@
 <label>
   <input type="checkbox" [(ngModel)]="editMode" (click)="toggleEditMode()"> Toggle EditMode
 </label>
-<div class="workspace">
-  <gridster [options]="options" class="gridster-workspace">
-    <gridster-item [item]="item" *ngFor="let item of widgets; let i = index" class="widget">
+
+<gridster [options]="options" class="gridster gridster-workspace">
+  <gridster-item [item]="item" *ngFor="let item of widgets; let i = index" class="gridster__item widget">
+    <div class="gridster__header">
+      <span class="gridster__title">Panel-Title</span>
+      <div class="gridster__panel">
+        icons
+      </div>
+    </div>
+    <div class="gridster__content">
       <b>Widget: {{item.name}}</b>
       <div>
         {{item.cols}} Cols x {{item.rows}} Rows
@@ -19,6 +26,6 @@
       <div>
         Position x, y: {{item.x}}, {{item.y}}
       </div>
-    </gridster-item>
-  </gridster>
-</div>
+    </div>
+  </gridster-item>
+</gridster>
