@@ -12,19 +12,41 @@
 
 <gridster [options]="options" class="gridster gridster-workspace">
   <gridster-item [item]="item" *ngFor="let item of widgets; let i = index" class="gridster__item widget">
-    <div class="gridster__header">
-      <span class="gridster__title">Panel-Title</span>
-      <div class="gridster__panel">
-        icons
+    <div class="gridster__inner">
+      <div class="gridster__element">
+        <div class="gridster__header">
+          <span class="gridster__title">Panel-Title</span>
+          <div class="gridster__panel">
+            icons
+          </div>
+        </div>
+        <div class="gridster__content">
+          <b>Widget: {{item.name}}</b>
+          <div>
+            {{item.cols}} Cols x {{item.rows}} Rows
+          </div>
+          <div>
+            Position x, y: {{item.x}}, {{item.y}}
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="gridster__content">
-      <b>Widget: {{item.name}}</b>
-      <div>
-        {{item.cols}} Cols x {{item.rows}} Rows
-      </div>
-      <div>
-        Position x, y: {{item.x}}, {{item.y}}
+
+      <div class="gridster__element">
+        <div class="gridster__header">
+          <span class="gridster__title">Panel-Title</span>
+          <div class="gridster__panel">
+            icons
+          </div>
+        </div>
+        <div class="gridster__content">
+          <b>Widget: {{item.name}}</b>
+          <div>
+            {{item.cols}} Cols x {{item.rows}} Rows
+          </div>
+          <div>
+            Position x, y: {{item.x}}, {{item.y}}
+          </div>
+        </div>
       </div>
     </div>
     <div class="gridster__edit">
