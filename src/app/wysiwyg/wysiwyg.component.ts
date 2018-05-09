@@ -8,7 +8,7 @@ export class WysiwygComponent implements OnInit {
 
   constructor() {
     this.quillModules = {
-      toolbar: [['bold', 'italic', 'underline', 'strike'], [{ color: [] }]]
+      toolbar: [['bold', 'italic', 'underline', 'strike'], [{ color: [] }], ['link']]
     };
   }
 
