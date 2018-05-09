@@ -10,7 +10,7 @@
   <input type="checkbox" [(ngModel)]="editMode" (click)="toggleEditMode()"> Toggle EditMode
 </label>
 
-<gridster [options]="options" class="gridster gridster-workspace">
+<gridster [options]="options" class="gridster gridster-workspace" style="overflow: initial !important;">
   <gridster-item [item]="item" *ngFor="let item of widgets; let i = index" class="gridster__item widget">
     <div class="gridster__inner">
       <div class="gridster__element">
