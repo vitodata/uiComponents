@@ -6,4 +6,4 @@
     <b>Achtung:</b> In dieser Demo wird aktuell ein CSS verwendet. https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css
     <br /> Dies muss nicht zwingend so sein.
 </p>
-<input type="text" placeholder="Datepicker" class="form-control" bsDatepicker [bsConfig]="{ showWeekNumbers: false, containerClass: 'datepicker' }">
+<input type="text" placeholder="Datepicker" class="form-control" bsDatepicker [bsValue]="bsValue" [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY', showWeekNumbers: false, containerClass: 'datepicker' }">

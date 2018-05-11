@@ -47,7 +47,7 @@ const routes = [
   { path: 'griddragdrop', component: JqxGridDragDropComponent },
   { path: 'treegrid', component: JqxTreeGridComponent },
   { path: 'typeahead', component: TypeaheadComponent },
-  // { path: 'datetime', component: JqxDatetimeComponent },
+  { path: 'datetime', component: JqxDatetimeComponent },
   { path: 'wysiwyg', component: WysiwygComponent },
   { path: 'gridster', component: GridsterComponent },
   { path: '', redirectTo: '/grid', pathMatch: 'full' }
