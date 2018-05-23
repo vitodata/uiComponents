@@ -34,6 +34,11 @@ import {
   BsDatepickerModule
 } from 'ngx-bootstrap';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule, MatSelectModule, MatToolbarModule } from '@angular/material';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { SelectComponent } from './ngx-mat-select-search/ngx-mat-select-search.component';
 
 const quill: any = Quill; // this one is important, otherwise 'Quill' is undefined
 const Parchment = quill.import('parchment'); // override p with div tag
@@ -50,6 +55,7 @@ const routes = [
   { path: 'datetime', component: JqxDatetimeComponent },
   { path: 'wysiwyg', component: WysiwygComponent },
   { path: 'gridster', component: GridsterComponent },
+  { path: 'ngx-mat-select-search', component: SelectComponent },
   { path: '', redirectTo: '/grid', pathMatch: 'full' }
 ];
 
@@ -62,7 +68,12 @@ const routes = [
     TypeaheadModule.forRoot(),
     QuillModule,
     GridsterModule,
-    AgGridModule.withComponents([GridDatePickerComponent])
+    AgGridModule.withComponents([GridDatePickerComponent]),
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    NgxMatSelectSearchModule
   ],
   declarations: [
     // jQWidgets Components
@@ -84,7 +95,8 @@ const routes = [
     TypeaheadComponent,
     JqxDatetimeComponent,
     WysiwygComponent,
-    GridsterComponent
+    GridsterComponent,
+    SelectComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

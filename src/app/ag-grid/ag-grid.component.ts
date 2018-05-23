@@ -723,7 +723,7 @@ export class AgGridComponent implements OnInit {
 
   setGridCellFocus(selectedRowIndex?: number): void {
     if (selectedRowIndex == null) {
-      selectedRowIndex = this.widgetGrid.getdatainformation().rowscount;
+      selectedRowIndex = +this.widgetGrid.getdatainformation().rowscount;
       selectedRowIndex--;
     }
     this.widgetGrid.clearselection();

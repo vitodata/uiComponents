@@ -19,7 +19,8 @@
         "styles.scss",
         "../node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css",
         "../node_modules/ag-grid/dist/styles/ag-grid.css",
-        "../node_modules/ag-grid/dist/styles/ag-theme-balham.css"
+        "../node_modules/ag-grid/dist/styles/ag-theme-balham.css",
+        "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
       ],
       "scripts": [
         "../node_modules/jqwidgets-scripts/jqwidgets/globalization/globalize.js",
