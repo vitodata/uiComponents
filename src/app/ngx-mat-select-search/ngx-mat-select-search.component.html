@@ -11,20 +11,33 @@
   
     <h2>Examples</h2>
   
-    <h3>Single selection</h3>
+    <h3>Single selection Variation 1</h3>
+    <p>
+        <mat-select [formControl]="bankCtrl1" placeholder="Bank" #singleSelect1>
+          <ngx-mat-select-search [formControl]="bankFilterCtrl1"></ngx-mat-select-search>
+          <mat-option *ngFor="let bank of filteredBanks1 | async" [value]="bank">
+            {{bank.name}}
+          </mat-option>
+        </mat-select>
+    </p>
+    <p>
+      Selected Bank: {{bankCtrl1.value?.name}}
+    </p>
+
+    <h3>Single selection Variation 2</h3>
     <p>
       <mat-form-field>
-        <mat-select [formControl]="bankCtrl" placeholder="Bank" #singleSelect>
-          <ngx-mat-select-search [formControl]="bankFilterCtrl"></ngx-mat-select-search>
-          <mat-option *ngFor="let bank of filteredBanks | async" [value]="bank">
+        <mat-select [formControl]="bankCtrl2" placeholder="Bank" #singleSelect2>
+          <ngx-mat-select-search [formControl]="bankFilterCtrl2"></ngx-mat-select-search>
+          <mat-option *ngFor="let bank of filteredBanks2 | async" [value]="bank">
             {{bank.name}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </p>
     <p>
-      Selected Bank: {{bankCtrl.value?.name}}
-    </p>
+      Selected Bank: {{bankCtrl2.value?.name}}
+    </p>    
   
     <!--<h3>Multiple selection</h3>
     <p>
