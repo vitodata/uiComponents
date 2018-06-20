@@ -11,23 +11,5 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"]
   },
-  "include": ["src/**/*"],
-  "files": [
-    // For all widgets used, add the relevant .ts file.
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxgrid.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxinput.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxnumberinput.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxwindow.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxbuttons.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxtextarea.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxeditor.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxcombobox.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxdatetimeinput",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxdragdrop.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxsortable.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxtree.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownlist.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownbutton.ts",
-    "node_modules/jqwidgets-scripts/jqwidgets-ts/angular_jqxtreegrid.ts"
-  ]
+  "include": ["src/**/*"]
 }

@@ -3,20 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { JqxGridComponent } from './jqx-grid/jqx-grid.component';
-import { JqxTreeGridComponent } from './jqx-grid/jqx-treegrid.component';
-import { JqxGridDragDropComponent } from './jqx-grid/jqx-grid-drag-drop.component';
 import { TypeaheadComponent } from './typeahead/typeahead.component';
 
-import { jqxGridComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxgrid';
-import { jqxDropDownButtonComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownbutton';
-import { jqxDragDropComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdragdrop';
-import { jqxDropDownListComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdropdownlist';
-import { jqxTreeComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtree';
-import { jqxTreeGridComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxtreegrid';
-import { jqxSortableComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxsortable';
-import { jqxDateTimeInputComponent } from 'jqwidgets-scripts/jqwidgets-ts/angular_jqxdatetimeinput';
-import { JqxDatetimeComponent } from './jqx-datetime/jqx-datetime.component';
 import { WysiwygComponent } from './wysiwyg/wysiwyg.component';
 import { FormsModule } from '@angular/forms';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
@@ -36,7 +24,11 @@ import {
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule, MatSelectModule, MatToolbarModule } from '@angular/material';
+import {
+  MatFormFieldModule,
+  MatSelectModule,
+  MatToolbarModule
+} from '@angular/material';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { SelectComponent } from './ngx-mat-select-search/ngx-mat-select-search.component';
 
@@ -47,12 +39,8 @@ Block.tagName = 'DIV';
 quill.register(Block, true);
 
 const routes = [
-  // { path: 'grid', component: JqxGridComponent },
   { path: 'grid', component: AgGridComponent },
-  { path: 'griddragdrop', component: JqxGridDragDropComponent },
-  { path: 'treegrid', component: JqxTreeGridComponent },
   { path: 'typeahead', component: TypeaheadComponent },
-  { path: 'datetime', component: JqxDatetimeComponent },
   { path: 'wysiwyg', component: WysiwygComponent },
   { path: 'gridster', component: GridsterComponent },
   { path: 'ngx-mat-select-search', component: SelectComponent },
@@ -76,24 +64,11 @@ const routes = [
     NgxMatSelectSearchModule
   ],
   declarations: [
-    // jQWidgets Components
-    jqxGridComponent,
-    jqxDropDownButtonComponent,
-    jqxDateTimeInputComponent,
-    jqxDragDropComponent,
-    jqxDropDownListComponent,
-    jqxSortableComponent,
-    jqxTreeComponent,
-    jqxTreeGridComponent,
     // components from app
     AppComponent,
     AgGridComponent,
     GridDatePickerComponent,
-    JqxGridComponent,
-    JqxTreeGridComponent,
-    JqxGridDragDropComponent,
     TypeaheadComponent,
-    JqxDatetimeComponent,
     WysiwygComponent,
     GridsterComponent,
     SelectComponent
