@@ -1,47 +1,47 @@
-  <div class="basic-container">
-    <h1>ngx-mat-select-search</h1>
-    <p>This library provides an angular component providing an input field for searching / filtering
-      <a href="https://material.angular.io/components/select/overview" target="_blank">MatSelect</a>
-      options of the <a href="https://material.angular.io">Angular Material</a> library.</p>
+<div class="basic-container">
+  <h1>ngx-mat-select-search</h1>
+  <p>This library provides an angular component providing an input field for searching / filtering
+    <a href="https://material.angular.io/components/select/overview" target="_blank">MatSelect</a>
+    options of the <a href="https://material.angular.io">Angular Material</a> library.</p>
 
-    <p><a href="https://github.com/bithost-gmbh/ngx-mat-select-search" target="_blank">https://github.com/bithost-gmbh/ngx-mat-select-search</a></p>
+  <p><a href="https://github.com/bithost-gmbh/ngx-mat-select-search" target="_blank">https://github.com/bithost-gmbh/ngx-mat-select-search</a></p>
 
-    <p>In our implementation we're using Theme "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"</p>
-    <p>Please provide a new Theme for our application.</p>
+  <p>In our implementation we're using Theme "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"</p>
+  <p>Please provide a new Theme for our application.</p>
 
-    <h2>Examples</h2>
+  <h2>Examples</h2>
 
-    <h3>Single selection Variation 1</h3>
-    <p>
-        <mat-select class="select-search" [formControl]="bankCtrl1" placeholder="Bank" #singleSelect1>
-          <ngx-mat-select-search class="select-search__search" [formControl]="bankFilterCtrl1"></ngx-mat-select-search>
-          <div class="select-search__list">
-            <mat-option *ngFor="let bank of filteredBanks1 | async" [value]="bank">
-              {{bank.name}}
-            </mat-option>
-          </div>
-        </mat-select>
-    </p>
-    <p>
-      Selected Bank: {{bankCtrl1.value?.name}}
-    </p>
+  <h3>Single selection Variation 1</h3>
+  <p>
+    <mat-select class="select-search" [formControl]="bankCtrl1" placeholder="Bank" #singleSelect1>
+      <ngx-mat-select-search class="select-search__search" [formControl]="bankFilterCtrl1"></ngx-mat-select-search>
+      <div class="select-search__list">
+        <mat-option *ngFor="let bank of filteredBanks1 | async" [value]="bank">
+          {{bank.name}}
+        </mat-option>
+      </div>
+    </mat-select>
+  </p>
+  <p>
+    Selected Bank: {{bankCtrl1.value?.name}}
+  </p>
 
-    <h3>Single selection Variation 2</h3>
-    <p>
-      <mat-form-field>
-        <mat-select class="select-search" [formControl]="bankCtrl2" placeholder="Bank" #singleSelect2>
-          <ngx-mat-select-search [formControl]="bankFilterCtrl2"></ngx-mat-select-search>
-          <mat-option *ngFor="let bank of filteredBanks2 | async" [value]="bank">
-            {{bank.name}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </p>
-    <p>
-      Selected Bank: {{bankCtrl2.value?.name}}
-    </p>
+  <h3>Single selection Variation 2</h3>
+  <p>
+    <mat-form-field>
+      <mat-select class="select-search" [formControl]="bankCtrl2" placeholder="Bank" #singleSelect2>
+        <ngx-mat-select-search [formControl]="bankFilterCtrl2"></ngx-mat-select-search>
+        <mat-option *ngFor="let bank of filteredBanks2 | async" [value]="bank">
+          {{bank.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+    Selected Bank: {{bankCtrl2.value?.name}}
+  </p>
 
-    <!--<h3>Multiple selection</h3>
+  <!--<h3>Multiple selection</h3>
     <p>
       <mat-form-field>
         <mat-select [formControl]="bankMultiCtrl" placeholder="Banks" [multiple]="true" #multiSelect>
@@ -59,4 +59,4 @@
       <li>{{bank.name}}</li>
     </ul>
     <span class="version-info">Current build: {{version.full}}</span>-->
-  </div>
+</div>

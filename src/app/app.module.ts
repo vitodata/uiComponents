@@ -11,6 +11,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { QuillModule } from 'ngx-quill';
 import * as Quill from 'quill';
 import { GridsterComponent } from './gridster/gridster.component';
+import { LineChartDemoComponent } from './ng2-charts/ng2-charts.component';
 import { GridsterModule } from 'angular-gridster2';
 import { AgGridModule } from 'ag-grid-angular/main';
 import 'ag-grid-enterprise';
@@ -31,6 +32,7 @@ import {
 } from '@angular/material';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { SelectComponent } from './ngx-mat-select-search/ngx-mat-select-search.component';
+import { ChartsModule } from 'ng2-charts';
 
 const quill: any = Quill; // this one is important, otherwise 'Quill' is undefined
 const Parchment = quill.import('parchment'); // override p with div tag
@@ -44,6 +46,7 @@ const routes = [
   { path: 'wysiwyg', component: WysiwygComponent },
   { path: 'gridster', component: GridsterComponent },
   { path: 'ngx-mat-select-search', component: SelectComponent },
+  { path: 'ng2-charts', component: LineChartDemoComponent },
   { path: '', redirectTo: '/grid', pathMatch: 'full' }
 ];
 
@@ -61,7 +64,8 @@ const routes = [
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatSelectModule,
-    NgxMatSelectSearchModule
+    NgxMatSelectSearchModule,
+    ChartsModule
   ],
   declarations: [
     // components from app
@@ -71,7 +75,8 @@ const routes = [
     TypeaheadComponent,
     WysiwygComponent,
     GridsterComponent,
-    SelectComponent
+    SelectComponent,
+    LineChartDemoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
