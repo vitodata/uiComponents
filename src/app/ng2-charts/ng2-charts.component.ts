@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// x/y-axes min/max values, disable xAxes Line, Legend and Tooltip Color -> http://jsfiddle.net/h9oyxqbk/
+
 @Component({
   selector: 'line-chart-demo',
   templateUrl: './ng2-charts.component.html'
@@ -7,47 +9,55 @@ import { Component } from '@angular/core';
 export class LineChartDemoComponent {
   // lineChart
   public lineChartData: Array<any> = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
-    { data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C' }
+    { data: [4.9, 5.1, 5.9, 6.5, 5.5, 5.2, 4.5], label: 'Glukose' }
   ];
   public lineChartLabels: Array<any> = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July'
+    ['Heute', '14:13'],
+    ['01.03', '15:52'],
+    ['01.03', '09:13'],
+    ['13.02', '14:27'],
+    ['02.02', '11:36'],
+    ['28.01', '15:03'],
+    ['15.01', '15:03']
   ];
   public lineChartOptions: any = {
-    responsive: true
+    responsive: true,
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines: {
+          display: false,
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          color: '#DADADA'
+        },
+        // Disable Min/Max Values
+        ticks: {
+          min: 4,
+          max: 7,
+          step: 1,
+        },
+      }],
+    },
+    tooltips: {
+      displayColors: false,
+
+    },
   };
   public lineChartColors: Array<any> = [
     {
       // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    },
-    {
-      // dark grey
-      backgroundColor: 'rgba(77,83,96,0.2)',
-      borderColor: 'rgba(77,83,96,1)',
-      pointBackgroundColor: 'rgba(77,83,96,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(77,83,96,1)'
-    },
-    {
-      // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
+      radius: 5,
+      pointHoverRadius: 5,
+      backgroundColor: 'transparent',
+      borderColor: '#c6c6c6',
+      borderWidth: 2,
+      pointBackgroundColor: ['#6A7D39', '#C85112', '#A9261E', '#A9261E', '#C85112', '#C85112', '#6A7D39'],
+      pointBorderColor: '#f6f6f6',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     }
